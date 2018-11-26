@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Root from './containers/Root'
+import App from './containers/App'
 import { configure } from 'mobx';
 
-configure({ enforceActions: 'observed' });
+configure({ enforceActions: 'always' });
 
-ReactDom.render(<Root />, document.getElementById('root'))
+ReactDom.render(<App />, document.getElementById('root'))

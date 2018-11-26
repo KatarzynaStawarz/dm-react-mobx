@@ -1,21 +1,9 @@
-import React from 'react'
-import { observer } from 'mobx-react'
+import React from 'react';
 
-const Product = ({ id, name, isSold, onBuyClick }) => {
-  const handleClick = () => {
-    onBuyClick(id)
-  }
+const Product = ({name}) => (
+  <span>
+    {name}
+  </span>
+)
 
-  return (
-    <div>
-      <span style={ { textDecoration: isSold ? 'line-through' : 'none' }}>
-        { name }
-      </span>
-      <button onClick={ handleClick }>
-        Buy
-      </button>
-    </div>
-  )
-}
-
-export default observer(Product)
+export default Product;
